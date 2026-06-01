@@ -198,7 +198,7 @@ function result(){
     </div>`);
   setTimeout(()=>{const b=document.getElementById('bf');if(b)b.style.width=pct+'%';},350);
 }
-function copyLink(){const u=FORM;navigator.clipboard?navigator.clipboard.writeText(u).then(()=>showToast('링크 복사 완료!')):fb(u)}
+function copyLink(){const u='https://borainbow.github.io/minitest/transfer_choice.html';navigator.clipboard?navigator.clipboard.writeText(u).then(()=>showToast('링크 복사 완료!')):fb(u)}
 function fb(u){const t=document.createElement('textarea');t.value=u;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);showToast('링크 복사 완료!')}
 function retry(){step=-1;picks=Array(Q.length).fill(null);advancing=false;render();}
 render();
